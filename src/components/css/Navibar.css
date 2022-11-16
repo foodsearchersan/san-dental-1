@@ -1,0 +1,145 @@
+.container1 button {
+    position: absolute;
+    top: 14px;
+    right: 15px;
+}
+
+.right_items {
+    font-size: 25px;
+    padding: 9px 0px;
+    font-weight: 500;
+}
+
+.title2 {
+    font-size: 27px;
+    font-weight: 500;
+    margin-left: -15px;
+}
+
+/* button focus turn off from bootsrap */
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.right_items .item {
+    margin: 0px 20px;
+
+}
+
+.navbar-nav .nav-link.active {
+    color: #e6472f !important;
+}
+
+.nav-link {
+    color: #002222 !important;
+}
+.navbar-dark .navbar-brand:focus,
+.navbar-dark .navbar-brand {
+    color: rgb(255, 255, 255) !important;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.navbar {
+    font-weight: 300;
+    box-shadow: none !important;
+}
+
+.navbar.navbar-dark .navbar-toggler {
+    /* color: #ac2020 !important; */
+    background-color: rgb(255, 255, 255);
+}
+
+.navbar-expand-lg .navbar-nav {
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+}
+
+.contact_link {
+    background-color: orange !important;
+    border-radius: 4px;
+}
+
+.navbar-dark .navbar-toggler-icon {
+    color: white !important;
+}
+
+.navbar.navbar-dark .navbar-toggler {
+
+    border: 1px solid grey;
+}
+
+.navbar-toggler {
+    border: none !important;
+}
+
+.bg-dark {
+    background-color: transparent !important;
+    padding: 13px 0;
+}
+
+.navbar-nav .dropdown-menu {
+    position: static;
+    border: none !important;
+}
+
+
+/* responsive above  990px */
+@media(min-width:990px) {
+    .container1 {
+        height: 55px;
+    }
+
+    .title2 {
+        position: absolute;
+        top: 7px;
+        left: 58px;
+    }
+
+    .title2 {
+        font-size: 31px;
+        font-weight: bold;
+        margin-left: -15px;
+    }
+
+    .nav_main_home {
+        /* border-bottom: 1px solid gainsboro; */
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+
+
+}
+
+
+/* responsive below 700px */
+@media(max-width:600px) {
+
+
+    /* mb slider open as center */
+    .container {
+        margin: 0px 18px !important;
+    }
+
+    .right_items a.nav-link {
+        text-align: center;
+        padding: 27px 10px;
+    }
+
+    .right_items {
+        font-size: 20px !important;
+        padding: 27px 0px;
+        font-weight: 300 !important;
+    }
+
+    .nav_main_home {
+        /* border-bottom: 1px solid gainsboro; */
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+    .bg-dark {
+        background-color: transparent !important;
+        padding: 4px;
+    }
+
+}

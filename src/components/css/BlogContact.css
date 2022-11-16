@@ -1,0 +1,41 @@
+
+.font-weight-bold{
+    font-weight: bold;
+}
+.primary{
+    color: #f57825;
+}
+.secondary{
+    color: #237d9e;
+}
+a{
+    text-decoration: none;
+    color:#f57825;
+}
+a:hover{
+    color:#f3680c;
+}
+.contact h3, .contact h4{
+    color:#f57825;
+}
+.contact h5{
+    color:#237d9e;
+}
+
+.blog-content{
+    padding:30px 0px;
+    border-bottom: 1px solid grey;
+}
+
+.blog-content .blog-date{
+    padding:10px 0px
+}
+
+.archive-list{
+    padding:5px 0px
+}
+
+.archive-list:hover{
+    cursor: pointer;
+    color:#f57825;
+}

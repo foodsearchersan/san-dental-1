@@ -1,0 +1,61 @@
+/* ph number */
+.nav_ph_icon{
+    margin-top: -3px;
+    margin-right: 4px;
+}
+.tpp_nav_ph_cont {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1px 10px;
+background-color: #ffd4c3;
+color: black;
+height: 40px;
+}
+
+.ph_left {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.ph_left p {
+margin-left:0px;
+text-align: center;
+}
+.ph_left p:last-child{
+    margin-left: 13px;
+}
+
+.ph_left {
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 11px;
+font-size: 13px;
+}
+
+.ph_right {
+margin-top: -8px;
+}
+
+
+/* navbar home */
+
+ 
+.container, .container-sm {
+max-width:100% !important;
+}
+.nav_home_cont {
+    background-color: #54a2af;
+}
+
+@media(max-width:390px){
+    .ph_left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 16px;
+        font-size: 11px;
+    }
+}
