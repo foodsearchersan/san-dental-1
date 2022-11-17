@@ -27,7 +27,7 @@ function Navibar() {
               MEET DR. PREM
               </NavDropdown.Item>
               <NavDropdown.Item as={Link} to='/TheTeam'>THE TEAM</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to='/OurSucessStories'>OURSUCESSSTORIES</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to='/OurSucessStories'>SUCCESS STORIES</NavDropdown.Item>
             </NavDropdown>
 
         
@@ -41,7 +41,7 @@ function Navibar() {
               <NavDropdown.Item as={Link} to='/GuidedSurgeries'>GUIDED SURGERIES</NavDropdown.Item>
               <NavDropdown.Item as={Link} to='/SinusLifts'>SINUS LIFTS</NavDropdown.Item>
               <NavDropdown.Item as={Link} to='/ProsthesisTypes'>PROSTHESIS TYPES</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to='/ThoothOnDay'>TOOTH-ON-A-DAY</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to='/ThoothOnDay'>TOOTH-IN-A-DAY</NavDropdown.Item>
                
             </NavDropdown>
 

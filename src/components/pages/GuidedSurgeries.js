@@ -1,7 +1,7 @@
 import React from 'react'
-import on6one from '../Assests/on6one.jpg'
+import GSone from '../Assests/GSone.png'
 import on6two from '../Assests/on6two.jpeg'
-import on6three from '../Assests/on6three.jpg'
+import GStwo from '../Assests/GStwo.png'
 import on6four from '../Assests/on6four.jpg'
 import BGC from '../Assests/BGC.png'
 import {TiTick} from 'react-icons/ti'
@@ -12,11 +12,11 @@ function GuidedSurgeries() {
     return (
         <div>
             <div className='on6_img_cont'>
-                <img src={BGC} />
+                <img src={GStwo} />
                 <div className='on6_img_sub_cont1'>
                     <div className='on6_img_sub_cont'>
-                        <h1 className='on6_title1'>Guided Surgeries </h1>
-                        <h1 className='on6_title2'>Easily replace six or more missing teeth</h1>
+                        {/* <h1 className='on6_title1'>Guided Surgeries </h1>
+                        <h1 className='on6_title2'>Easily replace six or more missing teeth</h1> */}
                     </div>
                 </div>
             </div>
@@ -25,7 +25,7 @@ function GuidedSurgeries() {
                 <div className='on6_div1_main_cont'>
                     <div className='on6_div1_main_cont_1'>
                         <h1>Guided Surgeries </h1>
-                        <img src={on6two} />
+                        <img src={GSone} />
                     </div>
                     <div className='on6_div1_main_cont_2'>
                         <p>A more modern approach to dental implant surgery is guided implant surgery. It entails planning the surgery with computer software using the patient's CT images. By working together in this way, we have been able to produce individualized results that are precisely tailored to the patient's individual dental needs. These technological advancements have improved the level of communication between the surgeon and restorative dentist.</p>

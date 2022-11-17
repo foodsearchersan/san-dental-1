@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import '../css/Home.css';
-import SimpleImageSlider from "react-simple-image-slider";
+ 
 import banner from '../Assests/banner.mp4'
+import videobanner1 from '../Assests/videobanner1.mp4'
 import spec1 from '../Assests/spec1.jpg'
 import spec2 from '../Assests/spec2.jpg'
 import spec3 from '../Assests/spec3.jpg'
@@ -26,10 +27,14 @@ import six from '../Assests/six.png'
 import seven from '../Assests/seven.png'
 import eight from '../Assests/eight.png'
 import P4 from '../Assests/P4.jpg'
+import GuidedSurgeries from '../Assests/GuidedSurgeries.png'
+
+
+import URL from './URL'
 
 
 import CountUp from "react-countup";
-
+import Carousel from 'react-bootstrap/Carousel';
 
 
 // swiper js
@@ -62,6 +67,7 @@ function Home() {
 
 
 
+
     const settings = {
         dots: true,
         infinite: true,
@@ -79,8 +85,8 @@ function Home() {
 
             {/* slider */}
             <div class="banner_slider" >
-                <video width="320" height="240" autoPlay muted>
-                    <source src={banner} type="video/mp4" />
+                <video width="320" height="240" autoPlay loop muted>
+                    <source src={videobanner1} type="video/mp4" />
                 </video>
             </div>
 
@@ -121,7 +127,7 @@ function Home() {
             </div>
 
 
-
+            {/* 
             <div className="abt_cont">
                 
                 <div className="banner_img_slider">
@@ -140,7 +146,67 @@ function Home() {
                     <img src={five}/>
                 </div>
                 
-            </div>
+            </div> */}
+          <div className='why_choose_cont'>
+          <Carousel activeIndex={index} onSelect={handleSelect} className='why_choose_main_cont'>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100"
+                        src={one}
+                        alt="First slide"
+                    />
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100"
+                        src={two}
+                        alt="Second slide"
+                    />
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100"
+                        src={three}
+                        alt="Third slide"
+                    />
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100"
+                        src={Four}
+                        alt="First slide"
+                    />
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100"
+                        src={five}
+                        alt="Second slide"
+                    />
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100"
+                        src={six}
+                        alt="Third slide"
+                    />
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100"
+                        src={seven}
+                        alt="Third slide"
+                    />
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100"
+                        src={eight}
+                        alt="Third slide"
+                    />
+                </Carousel.Item>
+            </Carousel>
+          </div>
 
 
 
@@ -192,7 +258,8 @@ function Home() {
  */}
 
 
-                    
+ 
+<div class="elfsight-app-88e28f72-d80c-45a7-a7cf-084cb2e0e05c"></div>
                 </div>
             </div>
 
@@ -210,32 +277,32 @@ function Home() {
             <div className="specs_cont" >
                 <div className="specs_main_cont" >
                     <div className="s_icon_cont" data-aos="fade-up">
-                        <img src={allon4v2} />
+                      <a href="https://apollo.skynoveau.in/AllOn4">  <img src={allon4v2} /></a>
                         <p>All-On-4 Implant Treatment</p>
                     </div>
-                    
+
                     <div className="s_icon_cont" data-aos="fade-up">
-                        <img src={allon6v2} />
+                       <a href='https://apollo.skynoveau.in/AllOn6'> <img src={allon6v2} /></a>
                         <p>All-On-6 Implant Treatment</p>
                     </div>
                     <div className="s_icon_cont" data-aos="fade-up">
-                        <img src={s_icons} />
+                      <a href='https://apollo.skynoveau.in/GuidedSurgeries'>  <img src={GuidedSurgeries} /></a>
                         <p>Guided Surgeries</p>
                     </div>
                     <div className="s_icon_cont" data-aos="fade-up">
-                        <img src={Aimplantsv2} />
+                      <a href='https://apollo.skynoveau.in/Asesthetic'>  <img src={Aimplantsv2} /></a>
                         <p>Aesthetic Implants </p>
                     </div>
                     <div className="s_icon_cont" data-aos="fade-up">
-                        <img src={Sinusliftv3ai} />
+                       <a href='https://apollo.skynoveau.in/SinusLifts' > <img src={Sinusliftv3ai} /></a>
                         <p>Sinus Lifts </p>
                     </div>
                     <div className="s_icon_cont" data-aos="fade-up">
-                        <img src={Toothonadayv6} />
+                      <a href='https://apollo.skynoveau.in/ThoothOnDay'>  <img src={Toothonadayv6} /></a>
                         <p>Tooth-on-a-Day</p>
                     </div>
                     <div className="s_icon_cont" data-aos="fade-up">
-                        <img src={Ptypesv2 } />
+                       <a href='https://apollo.skynoveau.in/ProsthesisTypes'> <img src={Ptypesv2} /></a>
                         <p>Prosthesis Types </p>
                     </div>
                 </div>
@@ -416,13 +483,7 @@ function Home() {
                                     </div>
                                 </div>
                             </SwiperSlide>
-
-
-
-
                         </Swiper>
-
-
                     </div>
                 </div>
 

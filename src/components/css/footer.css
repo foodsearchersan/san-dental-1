@@ -3,7 +3,7 @@
     background-color: #21687e;
     display: flex;
     justify-content: center;
-    
+    position: relative;
   
 }
 
@@ -14,6 +14,7 @@
     justify-content: center;
     width: 90%;
     margin-top:50px;
+    
 }
 .add_main_cont{
 display: flex;
@@ -87,8 +88,12 @@ justify-content:space-around;
 .qrcode_loc img{
     width: 100px;
 }
-
- 
+.apollo_logo {
+    width: 109px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
 
 
 

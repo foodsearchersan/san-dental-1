@@ -11,12 +11,12 @@ import '../css/AllOn6.css'
 function Asesthetic() {
     return (
         <div>
-            <div className='on6_img_cont'>
+            <div className='on6_img_cont Asesthetic_banner_img'>
                 <img src={Aimplant} />
-                <div className='on6_img_sub_cont1'>
+                <div className='on6_img_sub_cont1 '>
                     <div className='on6_img_sub_cont'>
-                        <h1 className='on6_title1'>Aesthetic Implants</h1>
-                        <h1 className='on6_title2'>Easily replace six or more missing teeth</h1>
+                        {/* <h1 className='on6_title1'>Aesthetic Implants</h1>
+                        <h1 className='on6_title2'>Easily replace six or more missing teeth</h1> */}
                     </div>
                 </div>
             </div>

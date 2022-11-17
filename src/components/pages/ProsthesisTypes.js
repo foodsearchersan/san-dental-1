@@ -1,6 +1,6 @@
 import React from 'react'
-import on6one from '../Assests/on6one.jpg'
-import on6two from '../Assests/on6two.jpeg'
+import DPone from '../Assests/DPone.png'
+import DPtwo from '../Assests/DPtwo.png'
 import on6three from '../Assests/on6three.jpg'
 import on6four from '../Assests/on6four.jpg'
 import PTypes from '../Assests/PTypes.png'
@@ -15,8 +15,8 @@ function ProsthesisTypes() {
         <img src={PTypes} />
         <div className='on6_img_sub_cont1'>
           <div className='on6_img_sub_cont'>
-            <h1 className='on6_title1'>Prosthesis type </h1>
-            <h1 className='on6_title2'>Easily replace six or more missing teeth</h1>
+            {/* <h1 className='on6_title1'>Prosthesis type </h1>
+            <h1 className='on6_title2'>Easily replace six or more missing teeth</h1> */}
           </div>
         </div>
       </div>
@@ -25,7 +25,7 @@ function ProsthesisTypes() {
         <div className='on6_div1_main_cont'>
           <div className='on6_div1_main_cont_1'>
             <h1>Dental prostheses: What Are They?</h1>
-            <img src={on6two} />
+            <img src={DPtwo} />
           </div>
           <div className='on6_div1_main_cont_2'>
             <p>Dental prosthetics are dental appliances used to restore or replace missing or damaged teeth. Dental prostheses are capable of much more than just enhancing your smile; they can also lessen the risk of gum disease in the event of a missing tooth, facilitate chewing, and keep the jawbone from deteriorating.</p>
@@ -44,11 +44,32 @@ function ProsthesisTypes() {
 
           </div>
           <div className='on6_div2_main_cont_1'>
-            <img src={on6three} />
+            <img src={DPone} />
           </div>
         </div>
       </div>
 
+
+
+
+
+      <div className='on6_div5_cont prosthesis_on6_div5_cont'>
+        <div className='on6_div5_main_cont prosthesis_on6_div5_main_cont'>
+          <div className='on6_div5_main_cont_1'>
+            <h1>Benefits of a ceramic bridge</h1>
+          </div>
+          <div className='on6_div5_main_cont_2'>
+
+            <ul>
+              <li><TiTick className="on6_div6_li" /><div> Without the use of dental implants or a removable denture, bridges fill the gap
+              </div></li>
+              <li><TiTick className="on6_div6_li" /><div>Ceramic bridges can be matched to your teeth' colour and form which provides an aesthetic look</div></li>
+              <li><TiTick className="on6_div6_li" /><div>If they are maintained and built properly, they can last for 10-15 years</div></li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
 
 
 
@@ -73,24 +94,7 @@ function ProsthesisTypes() {
 
 
 
-
-      <div className='on6_div5_cont prosthesis_on6_div5_cont'>
-        <div className='on6_div5_main_cont prosthesis_on6_div5_main_cont'>
-          <div className='on6_div5_main_cont_1'>
-            <h1>Benefits of a ceramic bridge</h1>
-          </div>
-          <div className='on6_div5_main_cont_2'>
-
-            <ul>
-              <li><TiTick className="on6_div6_li" /><div>Without the use of dental implants or a removable denture, bridges fill the gap
-              </div></li>
-              <li><TiTick className="on6_div6_li" /><div>Ceramic bridges can be matched to your teeth' colour and form which provides an aesthetic look</div></li>
-              <li><TiTick className="on6_div6_li" /><div>If they are maintained and built properly, they can last for 10-15 years</div></li>
-
-            </ul>
-          </div>
-        </div>
-      </div>
+ 
 
 
 

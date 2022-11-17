@@ -1,8 +1,11 @@
 import React from 'react'
-import on6one from '../Assests/on6one.jpg'
+import ALL1 from '../Assests/ALL1.png'
 import on6two from '../Assests/on6two.jpeg'
 import on6three from '../Assests/on6three.jpg'
 import on6four from '../Assests/on6four.jpg'
+
+import ALLtwo from '../Assests/ALLtwo.png'
+import ALLthree from '../Assests/ALLthree.png'
 import BGC from '../Assests/BGC.png'
 import {TiTick} from 'react-icons/ti'
 
@@ -11,11 +14,11 @@ function AllOn6() {
     return (
         <div>
             <div className='on6_img_cont'>
-                <img src={on6one} />
+                <img src={ALL1} />
                 <div className='on6_img_sub_cont1'>
                     <div className='on6_img_sub_cont'>
-                        <h1 className='on6_title1'>All-on-6 Dental Implants</h1>
-                        <h1 className='on6_title2'>Easily replace six or more missing teeth</h1>
+                        {/* <h1 className='on6_title1'>All-on-6 Dental Implants</h1>
+                        <h1 className='on6_title2'>Easily replace six or more missing teeth</h1> */}
                     </div>
                 </div>
             </div>
@@ -28,7 +31,7 @@ function AllOn6() {
                         
                     </div>
                     <div className='on6_div1_main_cont_1'>
-                        <img src={on6two} />
+                        <img src={ALLthree} />
                         <p>The All-On-6 dental implants help replace all of a patient's teeth with dental implants. Similar to an All-On-4 implant procedure in many ways, an All-On-6 procedure is more time intensive and complex and provides high stability and greater strength for patients with few missing teeth. It is done with 6 surgical implants placed on the upper and lower jaw with a stable prosthetic dental arch. This procedure is ideal for patients with low bone density and completely decayed or damaged teeth.</p>
                         <p></p>
                     </div>
@@ -44,7 +47,7 @@ function AllOn6() {
 
                     </div>
                     <div className='on6_div2_main_cont_1'>
-                        <img src={on6three} />
+                        <img src={ALLtwo} />
                     </div>
                 </div>
             </div>
@@ -54,7 +57,7 @@ function AllOn6() {
                 <div className='on6_div3_main_cont'>
                     <div className='on6_div3_main_cont_1'>
                         <h1>Who needs an All-On-6 implant?</h1>
-                        <img src={on6four} />
+                        <img src={ALLtwo} />
                     </div>
                     <div className='on6_div3_main_cont_2'>
                         <p>If you are young, lose all your teeth and have adequate bone, with All-On-6 you can have your entire set of teeth again.</p>
