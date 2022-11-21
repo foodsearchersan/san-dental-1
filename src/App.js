@@ -16,36 +16,48 @@ import TheTeam from './components/pages/TheTeam';
 import ThoothOnDay from './components/pages/ThoothOnDay';
 import WalkPatients from './components/pages/WalkPatients';
 import Blog from './components/pages/Blog';
+import BlogInfo from './components/pages/Blog/info';
 import TopNav from './components/pages/TopNav';
 import './components/css/BlogContact.css'
+import whatsapp from './components/Assests/whatsapp.png'
+
+import './app.css'
+
 
 function App() {
   return (
-    <div className="App">
-      <TopNav />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/AllOn4" element={<AllOn4 />} />
-        <Route path="/AllOn6" element={<AllOn6 />} />
-        <Route path="/Asesthetic" element={<Asesthetic />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/Contact" element={<Contact />} />
-        <Route path="/GuidedSurgeries" element={<GuidedSurgeries />} />
-        <Route path="/MeetDrPrem" element={<MeetDrPrem />} />
-        <Route path="/NewPatients" element={<NewPatients />} />
-        <Route path="/OurSolution" element={<OurSolution />} />
-        <Route path="/ProsthesisTypes" element={<ProsthesisTypes />} />
-        <Route path="/SinusLifts" element={<SinusLifts />} />
-        <Route path="/Testimonials" element={<Testimonials />} />
-        <Route path="/TheTeam" element={<TheTeam />} />
-        <Route path="/ThoothOnDay" element={<ThoothOnDay />} />
-        <Route path="/WalkPatients" element={<WalkPatients />} />
+    <div>
+      <div className="App">
 
 
-      </Routes>
 
-      <Footer />
+        <TopNav />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/AllOn4" element={<AllOn4 />} />
+          <Route path="/AllOn6" element={<AllOn6 />} />
+          <Route path="/Asesthetic" element={<Asesthetic />} />
+          <Route exact path={`/blog/:id`} element={<BlogInfo />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/Contact" element={<Contact />} />
+          <Route path="/GuidedSurgeries" element={<GuidedSurgeries />} />
+          <Route path="/MeetDrPrem" element={<MeetDrPrem />} />
+          <Route path="/NewPatients" element={<NewPatients />} />
+          <Route path="/OurSolution" element={<OurSolution />} />
+          <Route path="/ProsthesisTypes" element={<ProsthesisTypes />} />
+          <Route path="/SinusLifts" element={<SinusLifts />} />
+          <Route path="/Testimonials" element={<Testimonials />} />
+          <Route path="/TheTeam" element={<TheTeam />} />
+          <Route path="/ThoothOnDay" element={<ThoothOnDay />} />
+          <Route path="/InternationalPatients" element={<WalkPatients />} />
 
+        </Routes>
+
+        <Footer />
+
+      </div>
+
+      <a href='https://wa.me/918939111172?text=Hai' className='whatsapp_icon'><img src={whatsapp} /></a>
     </div>
   );
 }

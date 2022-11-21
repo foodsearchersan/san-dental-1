@@ -1,17 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../css/Home.css';
- 
-import banner from '../Assests/banner.mp4'
-import videobanner1 from '../Assests/videobanner1.mp4'
-import spec1 from '../Assests/spec1.jpg'
-import spec2 from '../Assests/spec2.jpg'
-import spec3 from '../Assests/spec3.jpg'
-import spec4 from '../Assests/spec4.jpg'
+import YouTubeData from './you-tube-data/YouTubeData'
 
-import hos3 from '../Assests/hos3.jpg'
-import WhyChooseUsSquare from '../Assests/WhyChooseUsSquare.jpg'
+import videobanner1 from '../Assests/videobanner1.mp4'
+
 import clients from '../Assests/clients.jpg'
-import s_icons from '../Assests/s_icons.png'
 import Aimplantsv2 from '../Assests/Aimplantsv2.png'
 import Ptypesv2 from '../Assests/Ptypesv2.png'
 import allon4v2 from '../Assests/allon4v2.png'
@@ -27,62 +20,65 @@ import six from '../Assests/six.png'
 import seven from '../Assests/seven.png'
 import eight from '../Assests/eight.png'
 import P4 from '../Assests/P4.jpg'
+
 import GuidedSurgeries from '../Assests/GuidedSurgeries.png'
 
-
-import URL from './URL'
-
-
+//react counter
 import CountUp from "react-countup";
-import Carousel from 'react-bootstrap/Carousel';
 
+//boostrap
+import Carousel from 'react-bootstrap/Carousel';
 
 // swiper js
 import { Swiper, SwiperSlide } from "swiper/react";
 
+// import required modules
+import { Autoplay, Pagination, FreeMode, Navigation, Thumbs } from "swiper";
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-
-
-// import required modules
-import { Autoplay, Pagination } from "swiper";
-
-
+import "swiper/css/free-mode";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
 
 // material UI 
 import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
-import TopNav from './TopNav';
 
 
 
 function Home() {
 
-    const [index, setIndex] = useState(0);
 
+    // why choose us 
+    const [index, setIndex] = useState(0);
     const handleSelect = (selectedIndex, e) => {
         setIndex(selectedIndex);
     };
 
+    //youtube videos data
+   
+   const [currentYouTubeVideo, setCurrentYouTubeVideo] =useState("fODTy_gvJ28");
 
 
+//    useEffect(()=>{
 
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 3
-    };
+//    },[currentYouTubeVideo])
 
+   const youTubeVideoClicked=(e)=>{
+    console.log("id is "+e.target.props)
+    console.log("id is "+e.target)
+    console.log("id is "+e )
+    setCurrentYouTubeVideo(e)
+   }
+   YouTubeData.map((item)=>{
+    console.log(item.image)
+   })
+// setYouTube()
 
     return (
         <div>
-
-
-
-
             {/* slider */}
             <div class="banner_slider" >
                 <video width="320" height="240" autoPlay loop muted>
@@ -94,6 +90,7 @@ function Home() {
             {/* countes */}
             <div className="counts_cont">
                 <div className="counts_main_cont">
+                    
 
                     <div className="counts_1">
                         <p> <CountUp duration={7} className="counter" end="820" /></p>
@@ -115,10 +112,7 @@ function Home() {
 
 
 
-
-
-
-            {/* about us */}
+            {/* why choose us */}
             <div className='main_titile_cont'>
                 <div className="specs_title chooseUs">
                     <h1 >Why Choose Us</h1>
@@ -126,100 +120,66 @@ function Home() {
                 </div>
             </div>
 
-
-            {/* 
-            <div className="abt_cont">
-                
-                <div className="banner_img_slider">
-                    <img src={one}/>
-                </div>
-                <div className="banner_img_slider">
-                    <img src={two}/>
-                </div>
-                <div className="banner_img_slider">
-                    <img src={three}/>
-                </div>
-                <div className="banner_img_slider">
-                    <img src={Four}/>
-                </div>
-                <div className="banner_img_slider">
-                    <img src={five}/>
-                </div>
-                
-            </div> */}
-          <div className='why_choose_cont'>
-          <Carousel activeIndex={index} onSelect={handleSelect} className='why_choose_main_cont'>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src={one}
-                        alt="First slide"
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src={two}
-                        alt="Second slide"
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src={three}
-                        alt="Third slide"
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src={Four}
-                        alt="First slide"
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src={five}
-                        alt="Second slide"
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src={six}
-                        alt="Third slide"
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src={seven}
-                        alt="Third slide"
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src={eight}
-                        alt="Third slide"
-                    />
-                </Carousel.Item>
-            </Carousel>
-          </div>
-
-
-
-            {/* specilities stock imgages */}
-
-            {/* <div className='spec_stock_img_cont'>
-                <div className='spec_stock_img_main_cont'>
-                    <img src={spec1} />
-                  
-                </div>
-            </div> */}
-
-
+            <div className='why_choose_cont'>
+                <Carousel activeIndex={index} onSelect={handleSelect} className='why_choose_main_cont'>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src={one}
+                            alt="First slide"
+                        />
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src={two}
+                            alt="Second slide"
+                        />
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src={three}
+                            alt="Third slide"
+                        />
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src={Four}
+                            alt="First slide"
+                        />
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src={five}
+                            alt="Second slide"
+                        />
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src={six}
+                            alt="Third slide"
+                        />
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src={seven}
+                            alt="Third slide"
+                        />
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src={eight}
+                            alt="Third slide"
+                        />
+                    </Carousel.Item>
+                </Carousel>
+            </div>
 
             {/* vlog */}
             <div className='main_titile_cont'>
@@ -231,35 +191,22 @@ function Home() {
 
             <div className="vlog_slider_cont">
                 <div className="vlog_main_slider_cont">
-                    {/* <div className='vlog_1'>
-                        <iframe className='main_y_m' src="https://www.youtube.com/embed/BsCZYDCQHhg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div className='you_main_slider1'>
+                        <iframe width="100%" height="100%" id='ifram_video' src={`https://www.youtube.com/embed/${currentYouTubeVideo}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                    <div className='vlog_1_main'>
-                        <div className='vlog_2'>
-                            <p>Latest video</p>
-                            <div className='vlog_2_sub'>
-                                <iframe className='y_videos' src="https://www.youtube.com/embed/BsCZYDCQHhg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                <iframe className='y_videos' src="https://www.youtube.com/embed/BsCZYDCQHhg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                <iframe className='y_videos' src="https://www.youtube.com/embed/BsCZYDCQHhg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                <iframe className='y_videos' src="https://www.youtube.com/embed/BsCZYDCQHhg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-                        </div>
+                    <div className='you_main_slider2'>
+                        <div className='you_main_slider21'>
+                          {
+                            YouTubeData.map((item)=>{
+                                let temp=item.id
+                               return(
+                                <img src={`https://img.youtube.com/vi/${item.id}/maxresdefault.jpg`} props={item.id} onClick={(temp)=>{setCurrentYouTubeVideo(temp)}}/>
+                               )
+                            })
+                          }
 
-                        <div className='vlog_2'>
-                            <p>All video</p>
-                            <div className='vlog_2_sub'>
-                                <iframe className='y_videos' src="https://www.youtube.com/embed/BsCZYDCQHhg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                <iframe className='y_videos' src="https://www.youtube.com/embed/BsCZYDCQHhg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                <iframe className='y_videos' src="https://www.youtube.com/embed/BsCZYDCQHhg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                <iframe className='y_videos' src="https://www.youtube.com/embed/BsCZYDCQHhg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
                         </div>
                     </div>
- */}
-
-
- 
-<div class="elfsight-app-88e28f72-d80c-45a7-a7cf-084cb2e0e05c"></div>
                 </div>
             </div>
 
@@ -272,45 +219,39 @@ function Home() {
                 </div>
             </div>
 
-
-
             <div className="specs_cont" >
                 <div className="specs_main_cont" >
                     <div className="s_icon_cont" data-aos="fade-up">
-                      <a href="https://apollo.skynoveau.in/AllOn4">  <img src={allon4v2} /></a>
+                        <a href="https://apollo.skynoveau.in/AllOn4">  <img src={allon4v2} /></a>
                         <p>All-On-4 Implant Treatment</p>
                     </div>
 
                     <div className="s_icon_cont" data-aos="fade-up">
-                       <a href='https://apollo.skynoveau.in/AllOn6'> <img src={allon6v2} /></a>
+                        <a href='https://apollo.skynoveau.in/AllOn6'> <img src={allon6v2} /></a>
                         <p>All-On-6 Implant Treatment</p>
                     </div>
                     <div className="s_icon_cont" data-aos="fade-up">
-                      <a href='https://apollo.skynoveau.in/GuidedSurgeries'>  <img src={GuidedSurgeries} /></a>
+                        <a href='https://apollo.skynoveau.in/GuidedSurgeries'>  <img src={GuidedSurgeries} /></a>
                         <p>Guided Surgeries</p>
                     </div>
                     <div className="s_icon_cont" data-aos="fade-up">
-                      <a href='https://apollo.skynoveau.in/Asesthetic'>  <img src={Aimplantsv2} /></a>
+                        <a href='https://apollo.skynoveau.in/Asesthetic'>  <img src={Aimplantsv2} /></a>
                         <p>Aesthetic Implants </p>
                     </div>
                     <div className="s_icon_cont" data-aos="fade-up">
-                       <a href='https://apollo.skynoveau.in/SinusLifts' > <img src={Sinusliftv3ai} /></a>
+                        <a href='https://apollo.skynoveau.in/SinusLifts' > <img src={Sinusliftv3ai} /></a>
                         <p>Sinus Lifts </p>
                     </div>
                     <div className="s_icon_cont" data-aos="fade-up">
-                      <a href='https://apollo.skynoveau.in/ThoothOnDay'>  <img src={Toothonadayv6} /></a>
+                        <a href='https://apollo.skynoveau.in/ThoothOnDay'>  <img src={Toothonadayv6} /></a>
                         <p>Tooth-on-a-Day</p>
                     </div>
                     <div className="s_icon_cont" data-aos="fade-up">
-                       <a href='https://apollo.skynoveau.in/ProsthesisTypes'> <img src={Ptypesv2} /></a>
+                        <a href='https://apollo.skynoveau.in/ProsthesisTypes'> <img src={Ptypesv2} /></a>
                         <p>Prosthesis Types </p>
                     </div>
                 </div>
             </div>
-
-
-
-
 
 
 
@@ -321,9 +262,7 @@ function Home() {
                     <img src={P4} />
                 </div>
             </div>
-
-
-
+      
 
             <div className='test_main_cont_bg'>
                 <div className='main_titile_cont'>
@@ -333,12 +272,10 @@ function Home() {
                     </div>
                 </div>
 
+
                 {/* Testimonials */}
 
                 <div className="testi_cont">
-
-                    {/* <h1>Client <span style={{ color: "#00b8f1" }}>Speak</span></h1> */}
-
                     <div className="testi_main_cont">
 
                         <Swiper

@@ -1,0 +1,7 @@
+.whatsapp_icon img{
+    width: 52px;
+    position: fixed !important;
+    bottom: 16px;  
+    right: 16px;
+    z-index: 3;
+}

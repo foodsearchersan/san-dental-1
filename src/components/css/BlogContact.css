@@ -15,27 +15,66 @@ a{
 a:hover{
     color:#f3680c;
 }
-.contact h3, .contact h4{
-    color:#f57825;
-}
-.contact h5{
-    color:#237d9e;
-}
 
 .blog-content{
     padding:30px 0px;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid #e1e1e1;
 }
 
 .blog-content .blog-date{
     padding:10px 0px
 }
 
-.archive-list{
-    padding:5px 0px
+.slick-next:before, .slick-prev:before {
+    color: #f57825;
 }
 
-.archive-list:hover{
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;    
+}
+
+.no-gutters .col,.no-gutters [class*="col-"]{
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.pointer{
     cursor: pointer;
-    color:#f57825;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.page-container{
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto
+}
+
+@media (min-width:576px) {
+	.page-container{
+		max-width: 540px
+	}
+}
+
+@media (min-width:768px) {
+	.page-container{
+		max-width: 720px
+	}
+}
+
+@media (min-width:992px) {
+	.page-container{
+		max-width: 960px
+	}
+}
+
+@media (min-width:1200px) {
+	.page-container{
+		max-width: 1140px
+	}
 }

@@ -44,16 +44,7 @@ function Navibar() {
               <NavDropdown.Item as={Link} to='/ThoothOnDay'>TOOTH-IN-A-DAY</NavDropdown.Item>
                
             </NavDropdown>
-
-            <NavDropdown title="INTERNATIONAL PATIENTS" id="collasible-nav-dropdown">
-              <NavDropdown.Item as={Link} to='/NewPatients'>NEW PATIENTS</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to='/WalkPatients'>WALK-PATIENTS</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to='/Testimonials'>
-                TESTIMONIALS
-              </NavDropdown.Item>
-               
-            </NavDropdown>
-
+            <Nav.Link as={Link} to='/InternationalPatients'>INTERNATIONAL PATIENTS</Nav.Link>
             <Nav.Link as={Link} to='/blog'>BLOGS</Nav.Link>
 
             <Nav.Link as={Link} to='/Contact' className="contact_link">CONTACT</Nav.Link>

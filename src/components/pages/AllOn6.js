@@ -27,11 +27,12 @@ function AllOn6() {
                 <div className='on6_div1_main_cont'>
                     
                     <div className='on6_div1_main_cont_1'>
-                        <h1>What are All-On-6 Implants? </h1>
+                        <h1>All-On-6 Implants</h1>
+                        <img src={ALLthree} />
                         
                     </div>
                     <div className='on6_div1_main_cont_1'>
-                        <img src={ALLthree} />
+                        
                         <p>The All-On-6 dental implants help replace all of a patient's teeth with dental implants. Similar to an All-On-4 implant procedure in many ways, an All-On-6 procedure is more time intensive and complex and provides high stability and greater strength for patients with few missing teeth. It is done with 6 surgical implants placed on the upper and lower jaw with a stable prosthetic dental arch. This procedure is ideal for patients with low bone density and completely decayed or damaged teeth.</p>
                         <p></p>
                     </div>
@@ -57,7 +58,7 @@ function AllOn6() {
                 <div className='on6_div3_main_cont'>
                     <div className='on6_div3_main_cont_1'>
                         <h1>Who needs an All-On-6 implant?</h1>
-                        <img src={ALLtwo} />
+                        
                     </div>
                     <div className='on6_div3_main_cont_2'>
                         <p>If you are young, lose all your teeth and have adequate bone, with All-On-6 you can have your entire set of teeth again.</p>
@@ -87,24 +88,7 @@ function AllOn6() {
 
 
 
-            <div className='on6_div5_cont'>
-                <div className='on6_div5_main_cont'>
-                    <div className='on6_div5_main_cont_1'>
-                        <h1>What are the benefits of a teeth-in-a-day procedure?</h1>
-                    </div>
-                    <div className='on6_div5_main_cont_2'>
-                        
-                        <ul>
-                            <li><TiTick className="on6_div6_li"/><div> Rapid restoration. </div></li>
-                            <li><TiTick className="on6_div6_li"/><div>The ability to eat and speakeasy like you used to</div></li>
-                            <li><TiTick className="on6_div6_li"/><div>A bright smile.</div></li>
-                            <li><TiTick className="on6_div6_li"/><div>There's no need for detachable dentures. </div></li>
-                            <li><TiTick className="on6_div6_li"/><div>The closest thing to natural teeth that lets you bite and chew normally. </div></li>
-                            <li><TiTick className="on6_div6_li"/><div>A permanent long term solution.</div></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            
 
 
 

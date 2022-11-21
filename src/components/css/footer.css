@@ -91,8 +91,9 @@ justify-content:space-around;
 .apollo_logo {
     width: 109px;
     position: absolute;
-    top: 0;
-    right: 0;
+    top:11px;
+    right: 10px;
+    border-radius: 7px;
 }
 
 

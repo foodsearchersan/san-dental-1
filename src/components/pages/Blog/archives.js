@@ -8,19 +8,27 @@ const style = {
     maxWidth: 360,
     bgcolor: 'background.paper',
 };
+
+function getMonth(year) {
+    let month = [...new Set(BlogList.map(item => item.year === year && item.month))];
+    return month;
+}
+
 function BlogArchives(props) {
-    const [expansion, setExpansion] = useState("");
-    const { callBack } = props;
+    const { callBack, expansionValue } = props;
+    const [expansion, setExpansion] = useState(expansionValue);
     const yearList = [...new Set(BlogList.map(item => item.year))];
     const expansionChange = (val) => {
-        setExpansion(val);
+        let newValue = expansion === val ? "" : val;
+        setExpansion(newValue);
     }
     return (
         <div>
             <h4>Archives</h4>
             {yearList.map((data, i) => {
+                let monthData = getMonth(data);
                 return (
-                    <Accordion key={i} expanded={data === expansion} onClick={() => expansionChange(data)}>
+                    <Accordion key={i} expanded={data === expansion ? true : false} onClick={() => expansionChange(data)}>
                         <AccordionSummary
                             expandIcon={<FaAngleDown />}
                             aria-controls="panel1a-content"
@@ -29,14 +37,18 @@ function BlogArchives(props) {
                             <Typography>{data}</Typography>
                         </AccordionSummary>
                         <AccordionDetails className='p-0'>
-                            <List sx={style} component="nav" aria-label="mailbox folders">
-                                <ListItem onClick={() => callBack(data, "blog")} button>
-                                    <ListItemText primary="Blog" />
-                                </ListItem>
-                                <Divider />
-                                <ListItem onClick={() => callBack(data, "vlog")} button divider>
-                                    <ListItemText primary="Vlog" />
-                                </ListItem>
+
+                            <List sx={style} component="nav" aria-label="blog filter">
+                                {monthData.map((mon, j) => {
+                                    return mon !== false ? (
+                                        <React.Fragment key={j}>
+                                            <ListItem onClick={() => callBack(data, mon, expansion)} button>
+                                                <ListItemText primary={mon} />
+                                            </ListItem>
+                                            <Divider />
+                                        </React.Fragment>
+                                    ) : <></>
+                                })}
                             </List>
                         </AccordionDetails>
                     </Accordion>
