@@ -43,7 +43,7 @@ function Asesthetic() {
                         <p>An implant that can replace a missing tooth is referred to as a dental implant. Dental implants are so advanced in today's society that it is difficult to tell them apart from natural teeth because they resemble real teeth. Many people are learning about dental implants and discovering that they do not need to live with smile gaps, especially if they have financing options.</p>
                         <p>In the case of a trauma or impaction of the anterior tooth, the same should be extracted by the implantologist and preferably an implant placed on the same day or within 48 hours to avoid bone resorption. By doing so, you will not only be able to save the bone but the gums too! The crown will be fixed on the same day and allowed to heal.</p>
                     </div>
-                    <div className='on6_div2_main_cont_1'>
+                    <div className='on6_div2_main_cont_1 Asesthetic_img1'>
                         <img src={on6three} />
                     </div>
                 </div>

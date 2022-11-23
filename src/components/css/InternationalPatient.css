@@ -1,0 +1,75 @@
+.intern_pat_cont1 {
+    display: flex;
+    justify-content: center;
+    background-color: #ffd4c3;
+    width: 100%;
+   
+    padding: 15px 0 36px 0;
+}
+.intern_pat_cont12{
+   width: 90%;
+   margin-top:30px;
+}
+.intern_pat_cont12 h1 {
+    margin-bottom: 23px;
+    color: #00224f;
+}
+
+.intern_pat_cont2{
+    display: flex;
+    justify-content: center;
+}
+.intern_pat_cont2 img {
+    width: 70%;
+    height: 100%;
+    margin-top: 10px;
+    object-fit: cover;
+}
+.intern_pat_cont2_title {
+    margin-top: 33px;
+    font-size: 35px;
+    text-align: center;
+    font-weight: 700;
+    color: #00224f;
+}
+.intern_pat_cont12_text1 {
+    text-align: center;
+    font-size: 21px;
+    font-weight: 600;
+    color: #2a2a2a;
+}
+
+.inter_pat_testimo{
+    background-color: white;
+    padding: 0;
+}
+.intern_pat_cont1_videoT{
+    margin-top: -7px;
+}
+
+
+
+
+
+@media (max-width:600px) {
+    .intern_pat_cont1_videoT{
+        margin-top: -7px;
+    }
+    .intern_pat_cont12 {
+        width:97%;
+    }
+    .inter_pat_testimo_title{
+        margin-top: 0 !important;
+       
+    }
+    .inter_pat_testimo{
+        margin-bottom: 60px;
+    }
+    .intern_pat_cont2 img {
+        width: 95%;
+        margin-top: 10px;
+        margin-bottom: 34px;
+      
+    }
+   
+}

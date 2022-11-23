@@ -53,7 +53,7 @@ function SinusLifts() {
 
 
 
-            <div className='on6_div2_cont'>
+            <div className='on6_div2_cont sinsLift_cont1'>
                 <div className='on6_div2_main_cont'>
                     <div className='on6_div2_main_cont_2'>
                         <h1>Periodontal disease</h1>
@@ -67,13 +67,13 @@ function SinusLifts() {
             </div>
 
 
-            <div className='on6_div3_cont'>
+            <div className='on6_div3_cont sinsLift_cont2'>
                 <div className='on6_div3_main_cont'>
                     <div className='on6_div3_main_cont_1'>
                         <h1>Tooth loss</h1>
                         <img src={TL} />
                     </div>
-                    <div className='on6_div3_main_cont_2'>
+                    <div className='on6_div3_main_cont_2 sinsLift_cont2_txt'>
                         <p>Loss of jaw bone can happen as a result of tooth loss. The nearby bone may occasionally be reabsorbed back into the body after a tooth loss. This only becomes a problem if someone needs an implant to replace a missing tooth. There might not be enough bone for the procedure if they put off getting the implant for too long. Therefore, a sinus lift can increase bone density and make adequate reinforcement for the implant. </p>
 
                     </div>

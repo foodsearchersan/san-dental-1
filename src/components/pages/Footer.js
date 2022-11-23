@@ -11,9 +11,9 @@ function Footer() {
     return (
         <div>
             <div className="footer_cont on4_footer_cont">
-            <img src={logo} className='apollo_logo' />
+                <img src={logo} className='apollo_logo' />
                 <div className="footer_main_cont">
-                 
+
                     <div className="add_main_cont">
                         <div className="add_1" data-aos="zoom-in">
                             <div className='add_1_qr_line'>

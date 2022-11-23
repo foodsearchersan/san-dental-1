@@ -53,7 +53,7 @@ function ThoothOnDay() {
             <h1>How does the procedure work?</h1>
             <img src={TDtwo} />
           </div>
-          <div className='on6_div3_main_cont_2'>
+          <div className='on6_div3_main_cont_2 toothonday_cont1'>
             <p>Compared to the standard implant procedure, which can take anywhere between four and nine months to complete, ‘Tooth-in-a-Day’ can provide you with all of your dental needs by the time you're prepared to leave our clinic. To determine where to place the implants, our team will first take a high-resolution CT scan of your jawbone structure. After the implants are placed, a non-removable appliance is designed to cover them and provide reliable function. Actually, you'll get two restorations most of the time. We'll start the ‘Tooth-in-a-day’ procedure as soon as we receive your initial, temporary restoration. When you come to our office, we'll take out any teeth that are damaged. Following that, we position the temporary restoration and place the dental implant posts. as soon as your implants.</p>
           </div>
         </div>

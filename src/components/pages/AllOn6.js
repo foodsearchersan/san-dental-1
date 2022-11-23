@@ -7,7 +7,7 @@ import on6four from '../Assests/on6four.jpg'
 import ALLtwo from '../Assests/ALLtwo.png'
 import ALLthree from '../Assests/ALLthree.png'
 import BGC from '../Assests/BGC.png'
-import {TiTick} from 'react-icons/ti'
+import { TiTick } from 'react-icons/ti'
 
 import '../css/AllOn6.css'
 function AllOn6() {
@@ -25,16 +25,16 @@ function AllOn6() {
 
             <div className='on6_div1_cont'>
                 <div className='on6_div1_main_cont'>
-                    
-                    <div className='on6_div1_main_cont_1'>
+
+                    <div className='on6_div1_main_cont_1 '>
                         <h1>All-On-6 Implants</h1>
                         <img src={ALLthree} />
-                        
+
                     </div>
                     <div className='on6_div1_main_cont_1'>
-                        
+
                         <p>The All-On-6 dental implants help replace all of a patient's teeth with dental implants. Similar to an All-On-4 implant procedure in many ways, an All-On-6 procedure is more time intensive and complex and provides high stability and greater strength for patients with few missing teeth. It is done with 6 surgical implants placed on the upper and lower jaw with a stable prosthetic dental arch. This procedure is ideal for patients with low bone density and completely decayed or damaged teeth.</p>
-                        <p></p>
+
                     </div>
                 </div>
             </div>
@@ -54,25 +54,24 @@ function AllOn6() {
             </div>
 
 
-            <div className='on6_div3_cont'>
-                <div className='on6_div3_main_cont'>
-                    <div className='on6_div3_main_cont_1'>
+
+
+
+            <div className='on6_div4_cont on6_img_first_bar_cont'>
+                <div className='on6_div4_main_cont'>
+                    <div className='on6_div4_main_cont_1'>
                         <h1>Who needs an All-On-6 implant?</h1>
-                        
                     </div>
-                    <div className='on6_div3_main_cont_2'>
+                    <div className='on6_div4_main_cont_2 on6_img_first_bar_txt'>
                         <p>If you are young, lose all your teeth and have adequate bone, with All-On-6 you can have your entire set of teeth again.</p>
                         <p>We prescribe All-On-6 implants for patients who have an entire arch of missing teeth or who have partial tooth loss. All patients will receive a complete arch dental implant to replace their missing teeth. The All-On-6 approach is recommended as a reliable, long-term replacement for conventional dentures.</p>
                     </div>
                 </div>
             </div>
 
-{/* <div className='on6_scroll'>
-  <img src={on6three}/>
-</div> */}
 
 
-            <div className='on6_div4_cont'>
+            <div className='on6_div4_cont on6_img_second_bar_cont'>
                 <div className='on6_div4_main_cont'>
                     <div className='on6_div4_main_cont_1'>
                         <h1>How does the procedure work?</h1>
@@ -88,7 +87,7 @@ function AllOn6() {
 
 
 
-            
+
 
 
 

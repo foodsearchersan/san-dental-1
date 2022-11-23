@@ -315,7 +315,7 @@ function AllOn6() {
                   <div>
                     <div className='on4_advan_content'>
                       <h2>Are there any diet restrictions with my temporary teeth?</h2>
-                   <p>You will be restricted to a soft diet for the entire four-month healing period. This enables the implants to stay stationary when they fuse with the bone. There won't be any dietary restrictions once the implants have bonded and the permanent teeth are in position. You'll be able to eat all of your preferred foods once more.</p>
+                      <p>You will be restricted to a soft diet for the entire four-month healing period. This enables the implants to stay stationary when they fuse with the bone. There won't be any dietary restrictions once the implants have bonded and the permanent teeth are in position. You'll be able to eat all of your preferred foods once more.</p>
                     </div>
                   </div>
                 </li>

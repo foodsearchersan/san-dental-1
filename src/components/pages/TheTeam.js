@@ -1,6 +1,10 @@
 import React from 'react'
 import Pic3 from '../Assests/Pic3.jpg'
 import clients from '../Assests/clients.jpg'
+import DRJA from '../Assests/DRJA.jpg'
+import chirsty from '../Assests/chirsty.jpg'
+import DrDental from '../Assests/DrDental.jpg'
+import sobika from '../Assests/sobika.JPG'
 
 function TheTeam() {
     return (
@@ -20,17 +24,30 @@ function TheTeam() {
 
             <div className='on6_div1_cont'>
                 <div className='on6_div1_main_cont TheTeam_on6_div1_main_cont'>
+                <img src={DRJA}/>
                     <div className='on6_div1_main_cont_1 TheTeam_on6_div1_main_cont_1 '>
-                        <p>Dr. Jananee Sivapragasam</p>
+                        <h1><p>Dr. Jananee Sivapragasam</p>
                         <p>Expertise: General Dentistry</p>
                         <p>Qualification: BDS</p>
                         <p>Alma Mater: SRM University</p>
                         <p>Experience: 5 years</p>
+                        </h1>
+                        
+
+                        
+
+                        
 
                     </div>
+                    
                     <div className='on6_div1_main_cont_2 TheTeam_on6_div1_main_cont_2 '>
+                    <div className='on6_img_sub_cont'>
+                        <h1>
+                        
                         <p>Our Resident Consultant Dr. Jananee is a keen advocate for good oral hygiene and she goes above and beyond with her empathy. Her calm demeanour and effective communication involve patients in the healing process, resulting in a quicker and more effective phase of treatment. </p>
-                        <p>She holds a certification for invisible braces and clear aligners. She makes visiting the dentist's clinic a smile from start to finish. </p>
+                        <p>She holds a certification for invisible braces and clear aligners. She makes visiting the dentist's clinic a smile from start to finish.</p>
+                        </h1>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -55,6 +72,7 @@ function TheTeam() {
 
             <div className='on6_div1_cont'>
                 <div className='on6_div1_main_cont TheTeam_on6_div1_main_cont'>
+                <img src={chirsty} />
                     <div className='on6_div1_main_cont_1 TheTeam_on6_div1_main_cont_1 '>
                         <p>Dr. Christy George</p>
                         <p>Expertise: Periodontics and Dental Implants</p>
@@ -71,6 +89,7 @@ function TheTeam() {
 
               <div className='on6_div1_cont team1'>
                 <div className='on6_div1_main_cont TheTeam_on6_div1_main_cont'>
+                    <img src={sobika}/>
                     <div className='on6_div1_main_cont_1 TheTeam_on6_div1_main_cont_1 '>
                         <p>Dr. Sobika</p>
                         <p>Expertise:General Dentistry</p>
@@ -90,6 +109,7 @@ function TheTeam() {
 
               <div className='on6_div1_cont'>
                 <div className='on6_div1_main_cont TheTeam_on6_div1_main_cont'>
+                <img src={DrDental} />
                     <div className='on6_div1_main_cont_1 TheTeam_on6_div1_main_cont_1 '>
                         <p>Dr. Rekha Sampath</p>
                         <p>Expertise:Aesthetic Dentistry</p>

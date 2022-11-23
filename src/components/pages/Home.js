@@ -70,7 +70,7 @@ function Home() {
     console.log("id is "+e.target.props)
     console.log("id is "+e.target)
     console.log("id is "+e )
-    setCurrentYouTubeVideo(e)
+    setCurrentYouTubeVideo(e.target.getAttribute('data1'))
    }
    YouTubeData.map((item)=>{
     console.log(item.image)
@@ -200,7 +200,7 @@ function Home() {
                             YouTubeData.map((item)=>{
                                 let temp=item.id
                                return(
-                                <img src={`https://img.youtube.com/vi/${item.id}/maxresdefault.jpg`} props={item.id} onClick={(temp)=>{setCurrentYouTubeVideo(temp)}}/>
+                                <img src={`https://img.youtube.com/vi/${item.id}/maxresdefault.jpg`} data1={item.id} onClick={youTubeVideoClicked}/>
                                )
                             })
                           }

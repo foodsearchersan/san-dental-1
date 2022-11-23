@@ -27,7 +27,7 @@ function ProsthesisTypes() {
             <h1>Dental prostheses: What Are They?</h1>
             <img src={DPtwo} />
           </div>
-          <div className='on6_div1_main_cont_2'>
+          <div className='on6_div1_main_cont_2 prosthesisType_cont1_txt'>
             <p>Dental prosthetics are dental appliances used to restore or replace missing or damaged teeth. Dental prostheses are capable of much more than just enhancing your smile; they can also lessen the risk of gum disease in the event of a missing tooth, facilitate chewing, and keep the jawbone from deteriorating.</p>
 
           </div>
@@ -94,7 +94,7 @@ function ProsthesisTypes() {
 
 
 
- 
+
 
 
 

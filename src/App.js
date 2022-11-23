@@ -14,7 +14,7 @@ import SinusLifts from './components/pages/SinusLifts';
 import Testimonials from './components/pages/Testimonials';
 import TheTeam from './components/pages/TheTeam';
 import ThoothOnDay from './components/pages/ThoothOnDay';
-import WalkPatients from './components/pages/WalkPatients';
+import InternationalPatient from './components/pages/InternationalPatient';
 import Blog from './components/pages/Blog';
 import BlogInfo from './components/pages/Blog/info';
 import TopNav from './components/pages/TopNav';
@@ -49,7 +49,7 @@ function App() {
           <Route path="/Testimonials" element={<Testimonials />} />
           <Route path="/TheTeam" element={<TheTeam />} />
           <Route path="/ThoothOnDay" element={<ThoothOnDay />} />
-          <Route path="/InternationalPatients" element={<WalkPatients />} />
+          <Route path="/InternationalPatients" element={<InternationalPatient/>} />
 
         </Routes>
 
