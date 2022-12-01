@@ -4,7 +4,7 @@ import { FaUserCircle } from 'react-icons/fa';
 import TestimonialText from '../Json/TestimonialText.json';
 import InternationalPatientsVideo from '../Assests/Tourism/International_Patients.mp4';
 import PhaseInvolved from '../Assests/Tourism/Phases_involved.jpg';
-import AjayMegalaya from '../Assests/Tourism/ajay-meganathan-bQ1-L3Iwulk-unsplash.jpg';
+import food_imgae from '../Assests/Tourism/Food_image.jpg';
 import FebinRoy from '../Assests/Tourism/febin-roy-bJ__24dHcGE-unsplash.jpg';
 import KishoreRagav from '../Assests/Tourism/kishore-ragav-ganesh-kumar-XrAUr_m9q80-unsplash.jpg';
 import NoviRaj from '../Assests/Tourism/novi-raj-cWbrwDOGZJg-unsplash.jpg';
@@ -13,13 +13,15 @@ import RaguClicksD from '../Assests/Tourism/ragu-clicks-D1-echCD6io-unsplash.jpg
 import RaguClicks from '../Assests/Tourism/ragu-clicks-IaVXvH_z2PY-unsplash.jpg';
 import RhodaAlex from '../Assests/Tourism/rhoda-alex-2L2XCJbRgxc-unsplash.jpg';
 import SyedAriff from '../Assests/Tourism/syed-ariff-tIQ5iyorXKg-unsplash.jpg';
+import inter from '../Assests/inter.jpg'
+
 
 
 import '../css/InternationalPatient.css';
 
 function walkThroughContent() {
   return (
-    <div>
+    <div data-aos="fade-up">
       <div className='intern_pat_cont1 intern_pat_cont1_videoT'>
         <div className='intern_pat_cont12'>
           <h1 className='text-center font-weight-bold primary'>International Patient Process: A Walk Through</h1>
@@ -31,16 +33,16 @@ function walkThroughContent() {
       <h1 className='intern_pat_cont2_title'>Phases involved </h1>
       <div className='intern_pat_cont2'>
 
-        <img src={PhaseInvolved} alt="patients" />
+        <img src={inter} alt="patients" />
       </div>
     </div>
   )
 }
 
 function tourismContent() {
-  const imageData = [AjayMegalaya, FebinRoy, KishoreRagav, NoviRaj, ParthaNarasimhan, RaguClicksD, RaguClicks, RhodaAlex, SyedAriff]
+  const imageData = [food_imgae, FebinRoy, KishoreRagav, NoviRaj, ParthaNarasimhan, RaguClicksD, RaguClicks, RhodaAlex, SyedAriff]
   return (
-    <div>
+    <div data-aos="fade-up">
       {/* <h2 className='mt-5 text-center font-weight-bold primary'>Tourism</h2>
       <h4 className=' mt-2 text-center font-weight-bold secondary'>As the saying goes 'Atithi Devo Bhava', guests are our Gods in India.</h4>
       <p>Chennai is the cultural hub of the west and is often considered as the gateway to the south of India. It houses the Tamil film industry, a scenic coastline with amazing tropical beaches, amazing foods and was even named the "hottest" city by the BBC. In 2017, UNESCO Creative Cities Network (UCCN) listed chennai for its diverse and rich musical tradition.</p>
@@ -48,9 +50,13 @@ function tourismContent() {
       <div className='intern_pat_cont1 tourism1'>
         <div className='intern_pat_cont12'>
           <h1 className='text-center font-weight-bold primary '>Tourism</h1>
-          <p className='intern_pat_cont12_text1'>As the saying goes 'Atithi Devo Bhava', guests are our Gods in India.</p>
+          <p className='intern_pat_cont12_text1'>As the saying goes ‘Atithi Devo Bhava’, guests are our Gods in India.</p>
           <p>Chennai is the cultural hub of the west and is often considered as the gateway to the south of India. It houses the Tamil film industry, a scenic coastline with amazing tropical beaches, amazing foods and was even named the "hottest" city by the BBC. In 2017, UNESCO Creative Cities Network (UCCN) listed chennai for its diverse and rich musical tradition.</p>
+
           <p className='intern_pat_cont12_text2'>Here are some amazing spots you can visit while you are here in Chennai.</p>
+          <li>Amazing Tourist Spots</li>
+          <li>Diverse Foods</li>
+          <li>Cultural Events</li>
         </div>
       </div>
 
@@ -86,7 +92,7 @@ function testimonialContent() {
     cssEase: "linear"
   };
   return (
-    <div className='intern_pat_cont1 inter_pat_testimo'>
+    <div className='intern_pat_cont1 inter_pat_testimo' data-aos="fade-up">
       <div className='intern_pat_cont12'>
         <h2 className='mt-5 text-center font-weight-bold primary inter_pat_testimo_title'>Testimonials</h2>
         <div>
@@ -116,7 +122,7 @@ function testimonialContent() {
 function InternationalPatient() {
   return (
     <React.Fragment>
-      <video src={InternationalPatientsVideo} style={{ width: "100%", height: "100%" }} autoPlay muted playsInline loop></video>
+      <video src={InternationalPatientsVideo} style={{ width: "100%", height: "100%" }} autoPlay loop controls muted ></video>
       <div>
         <div>
           {walkThroughContent()}

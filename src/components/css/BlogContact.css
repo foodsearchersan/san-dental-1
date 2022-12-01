@@ -8,9 +8,10 @@
 .secondary{
     color: #237d9e;
 }
-a{
+a {
     text-decoration: none;
-    color:#f57825;
+    color: #54a2af;
+    font-weight: 600;
 }
 a:hover{
     color:#f3680c;

@@ -1,7 +1,8 @@
 .intern_pat_cont1 {
     display: flex;
     justify-content: center;
-    background-color: #ffd4c3;
+    background-image: url('../Assests//all_bg.jpg');
+    object-fit: cover;
     width: 100%;
    
     padding: 15px 0 36px 0;
@@ -12,7 +13,7 @@
 }
 .intern_pat_cont12 h1 {
     margin-bottom: 23px;
-    color: #00224f;
+    color:#54a2af;
 }
 
 .intern_pat_cont2{
@@ -30,7 +31,7 @@
     font-size: 35px;
     text-align: center;
     font-weight: 700;
-    color: #00224f;
+    color: #54a2af;
 }
 .intern_pat_cont12_text1 {
     text-align: center;
@@ -70,6 +71,10 @@
         margin-top: 10px;
         margin-bottom: 34px;
       
+    }
+    .intern_pat_cont1 .slick-next {
+        
+        display: none !important;
     }
    
 }

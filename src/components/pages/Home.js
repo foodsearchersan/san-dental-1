@@ -11,15 +11,36 @@ import allon4v2 from '../Assests/allon4v2.png'
 import allon6v2 from '../Assests/allon6v2.png'
 import Sinusliftv3ai from '../Assests/Sinusliftv3ai.png'
 import Toothonadayv6 from '../Assests/Toothonadayv6.png'
-import one from '../Assests/one.png'
-import two from '../Assests/two.png'
-import three from '../Assests/three.png'
-import Four from '../Assests/Four.png'
-import five from '../Assests/five.png'
-import six from '../Assests/six.png'
-import seven from '../Assests/seven.png'
-import eight from '../Assests/eight.png'
+
+import DChoose1 from '../Assests/ChoosseUs/DChoose1.png'
+import DChoose2 from '../Assests/ChoosseUs/DChoose2.png'
+import DChoose3 from '../Assests/ChoosseUs/DChoose3.png'
+import DChoose4 from '../Assests/ChoosseUs/DChoose4.png'
+import DChoose5 from '../Assests/ChoosseUs/DChoose5.png'
+import DChoose6 from '../Assests/ChoosseUs/DChoose6.png'
+import DChoose7 from '../Assests/ChoosseUs/DChoose7.png'
+import DChoose8 from '../Assests/ChoosseUs/DChoose8.png'
 import P4 from '../Assests/P4.jpg'
+
+import chooose1 from '../Assests/ChoosseUs/chooose1.png'
+import chooose2 from '../Assests/ChoosseUs/chooose2.png'
+import chooose3 from '../Assests/ChoosseUs/chooose3.png'
+import chooose4 from '../Assests/ChoosseUs/chooose4.png'
+import chooose5 from '../Assests/ChoosseUs/chooose5.png'
+import chooose6 from '../Assests/ChoosseUs/chooose6.png'
+import chooose7 from '../Assests/ChoosseUs/chooose7.png'
+import chooose8 from '../Assests/ChoosseUs/chooose8.png'
+
+
+import banner1 from '../Assests/banner1.png'
+import banner2 from '../Assests/banner2.png'
+import banner3 from '../Assests/banner3.png'
+import banner4 from '../Assests/banner4.png'
+import banner5 from '../Assests/banner5.png'
+import banner6 from '../Assests/banner3.png'
+import banner7 from '../Assests/banner7.png'
+import WYCU from '../Assests/WYCU.png'
+import Drprem from '../Assests/Drprem.png'
 
 import GuidedSurgeries from '../Assests/GuidedSurgeries.png'
 
@@ -58,52 +79,75 @@ function Home() {
     };
 
     //youtube videos data
-   
-   const [currentYouTubeVideo, setCurrentYouTubeVideo] =useState("fODTy_gvJ28");
 
+    const [currentYouTubeVideo, setCurrentYouTubeVideo] = useState("U-oE2XElmvI");
 
-//    useEffect(()=>{
+    //    useEffect(()=>{
 
-//    },[currentYouTubeVideo])
+    //    },[currentYouTubeVideo])
 
-   const youTubeVideoClicked=(e)=>{
-    console.log("id is "+e.target.props)
-    console.log("id is "+e.target)
-    console.log("id is "+e )
-    setCurrentYouTubeVideo(e.target.getAttribute('data1'))
-   }
-   YouTubeData.map((item)=>{
-    console.log(item.image)
-   })
-// setYouTube()
+    const youTubeVideoClicked = (e) => {
+        console.log("id is " + e.target.props)
+        console.log("id is " + e.target)
+        console.log("id is " + e)
+        setCurrentYouTubeVideo(e.target.getAttribute('data1'))
+    }
+    YouTubeData.map((item) => {
+        console.log(item.image)
+    })
+    // setYouTube()
 
     return (
         <div>
             {/* slider */}
             <div class="banner_slider" >
-                <video width="320" height="240" autoPlay loop muted>
-                    <source src={videobanner1} type="video/mp4" />
-                </video>
+                <Swiper
+                    spaceBetween={30}
+                    centeredSlides={true}
+                    autoplay={{
+                        delay: 7000,
+                        disableOnInteraction: true,
+                    }}
+                    pagination={{
+                        clickable: false,
+                    }}
+                    navigation={false}
+                    modules={[Autoplay]}
+                    className="mySwiper"
+
+                >
+                    <SwiperSlide>
+                        <img src={banner1} className='why_choose_img home_banner_img' />
+                    </SwiperSlide>
+
+                    <SwiperSlide> <img src={banner2} className='why_choose_img home_banner_img ' /></SwiperSlide>
+                    <SwiperSlide> <img src={banner3} className='why_choose_img home_banner_img' /></SwiperSlide>
+                    <SwiperSlide> <img src={banner4} className='why_choose_img home_banner_img' /></SwiperSlide>
+                    <SwiperSlide> <img src={Drprem} className='why_choose_img home_banner_img ' /></SwiperSlide>
+                    <SwiperSlide> <img src={banner6} className='why_choose_img home_banner_img' /></SwiperSlide>
+                    <SwiperSlide> <img src={banner7} className='why_choose_img home_banner_img' /></SwiperSlide>
+
+                </Swiper>
             </div>
 
 
             {/* countes */}
             <div className="counts_cont">
                 <div className="counts_main_cont">
-                    
+
 
                     <div className="counts_1">
-                        <p> <CountUp duration={7} className="counter" end="820" /></p>
+                        <p> <CountUp duration={7} className="counter" end="823" /></p>
 
-                        <p>All-On-4 procedures<br></br>Performed</p>
+                        <p>All-On-4 and All-On-6</p>
                     </div>
                     <div className="counts_1">
                         <p> <CountUp duration={7} className="counter" end="6000" /></p>
                         <p>Implants Placed</p>
                     </div>
                     <div className="counts_1">
-                        <p> <CountUp duration={7} className="counter" end="1000" /></p>
-                        <p>Smiles Changed</p>
+                        <p> <CountUp duration={7} className="counter" end="6800" /></p>
+                        <p>Happy Smiles</p>
                     </div>
 
 
@@ -113,77 +157,76 @@ function Home() {
 
 
             {/* why choose us */}
-            <div className='main_titile_cont'>
-                <div className="specs_title chooseUs">
-                    <h1 >Why Choose Us</h1>
+            <div className='main_titile_cont firsts_main_titile_cont choose_title_cont ' >
+                <div className="specs_title chooseUs" data-aos="fade-up">
+                    <h1>Why Choose Us</h1>
                     <p></p>
                 </div>
             </div>
 
             <div className='why_choose_cont'>
-                <Carousel activeIndex={index} onSelect={handleSelect} className='why_choose_main_cont'>
-                    <Carousel.Item>
-                        <img
-                            className="d-block w-100"
-                            src={one}
-                            alt="First slide"
-                        />
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img
-                            className="d-block w-100"
-                            src={two}
-                            alt="Second slide"
-                        />
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img
-                            className="d-block w-100"
-                            src={three}
-                            alt="Third slide"
-                        />
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img
-                            className="d-block w-100"
-                            src={Four}
-                            alt="First slide"
-                        />
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img
-                            className="d-block w-100"
-                            src={five}
-                            alt="Second slide"
-                        />
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img
-                            className="d-block w-100"
-                            src={six}
-                            alt="Third slide"
-                        />
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img
-                            className="d-block w-100"
-                            src={seven}
-                            alt="Third slide"
-                        />
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img
-                            className="d-block w-100"
-                            src={eight}
-                            alt="Third slide"
-                        />
-                    </Carousel.Item>
-                </Carousel>
+                <Swiper
+                    spaceBetween={30}
+                    centeredSlides={true}
+                    autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    }}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    navigation={true}
+                    modules={[Autoplay, Pagination, Navigation]}
+                    className="mySwiper"
+                >
+
+                    <SwiperSlide className='chooseUs_cont_box'>
+                        <img src={WYCU} className='why_choose_img Dwhy_choose_img' />
+                        <img src={WYCU} className='why_choose_img Mwhy_choose_img' />
+                        <p>The experience, technological expertise, and skill in All On 4 implants</p>
+                    </SwiperSlide>
+                    <SwiperSlide className='chooseUs_cont_box'>
+                        <img src={DChoose2} className='why_choose_img Dwhy_choose_img' />
+                        <img src={chooose2} className='why_choose_img Mwhy_choose_img' />
+                        <p> Certified medical professionals and reliant clinics</p>
+                    </SwiperSlide>
+                    <SwiperSlide className='chooseUs_cont_box'>
+                        <img src={DChoose3} className='why_choose_img Dwhy_choose_img' />
+                        <img src={chooose3} className='why_choose_img Mwhy_choose_img' />
+                        <p> Final teeth fixed in record time and with impeccable care</p>
+                    </SwiperSlide>
+                    <SwiperSlide className='chooseUs_cont_box'>
+                        <img src={DChoose4} className='why_choose_img Dwhy_choose_img' />
+                        <img src={chooose4} className='why_choose_img Mwhy_choose_img' />
+                        <p>Your whole medical care and diagnostics at one location</p>
+                    </SwiperSlide>
+                    <SwiperSlide className='chooseUs_cont_box'>
+                        <img src={DChoose5} className='why_choose_img Dwhy_choose_img' />
+                        <img src={chooose5} className='why_choose_img Mwhy_choose_img' />
+                        <p>Streamlined approach with backup plans built in</p>
+                    </SwiperSlide>
+                    <SwiperSlide className='chooseUs_cont_box'>
+                        <img src={DChoose6} className='why_choose_img Dwhy_choose_img' />
+                        <img src={chooose6} className='why_choose_img Mwhy_choose_img' />
+                        <p>We recommend services even for weak or thin jawbones</p>
+                    </SwiperSlide>
+                    <SwiperSlide className='chooseUs_cont_box'>
+                        <img src={DChoose7} className='why_choose_img Dwhy_choose_img' />
+                        <img src={chooose7} className='why_choose_img Mwhy_choose_img' />
+                        <p>Alternatives for durable Zirconia-Porcelain that are economical</p>
+                    </SwiperSlide>
+                    <SwiperSlide className='chooseUs_cont_box'>
+                        <img src={DChoose8} className='why_choose_img Dwhy_choose_img' />
+                        <img src={chooose8} className='why_choose_img Mwhy_choose_img' />
+                        <p>Alternatives for durable Zirconia-Porcelain that are economical
+                            Banner 8: Known outcomes and high reliability</p>
+                    </SwiperSlide>
+                </Swiper>
             </div>
 
             {/* vlog */}
-            <div className='main_titile_cont'>
-                <div className="specs_title vlog">
+            <div className='main_titile_cont'  >
+                <div className="specs_title vlog" data-aos="fade-up">
                     <h1>Know more</h1>
                     <p></p>
                 </div>
@@ -191,19 +234,19 @@ function Home() {
 
             <div className="vlog_slider_cont">
                 <div className="vlog_main_slider_cont">
-                    <div className='you_main_slider1'>
+                    <div className='you_main_slider1' >
                         <iframe width="100%" height="100%" id='ifram_video' src={`https://www.youtube.com/embed/${currentYouTubeVideo}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                    <div className='you_main_slider2'>
+                    <div className='you_main_slider2' >
                         <div className='you_main_slider21'>
-                          {
-                            YouTubeData.map((item)=>{
-                                let temp=item.id
-                               return(
-                                <img src={`https://img.youtube.com/vi/${item.id}/maxresdefault.jpg`} data1={item.id} onClick={youTubeVideoClicked}/>
-                               )
-                            })
-                          }
+                            {
+                                YouTubeData.map((item) => {
+                                    let temp = item.id
+                                    return (
+                                        <img src={`https://img.youtube.com/vi/${item.id}/maxresdefault.jpg`} data1={item.id} onClick={youTubeVideoClicked} />
+                                    )
+                                })
+                            }
 
                         </div>
                     </div>
@@ -212,9 +255,9 @@ function Home() {
 
 
             {/* Specialities */}
-            <div className='main_titile_cont'>
+            <div className='main_titile_cont' data-aos="fade-up">
                 <div className="specs_title spc_ori_title">
-                    <h1 >Specialties</h1>
+                    <h1>Specialities</h1>
                     <p></p>
                 </div>
             </div>
@@ -222,32 +265,32 @@ function Home() {
             <div className="specs_cont" >
                 <div className="specs_main_cont" >
                     <div className="s_icon_cont" data-aos="fade-up">
-                        <a href="https://apollo.skynoveau.in/AllOn4">  <img src={allon4v2} /></a>
+                        <a href="https:/apollodental.netlify.app/AllOn4">  <img src={allon4v2} /></a>
                         <p>All-On-4 Implant Treatment</p>
                     </div>
 
                     <div className="s_icon_cont" data-aos="fade-up">
-                        <a href='https://apollo.skynoveau.in/AllOn6'> <img src={allon6v2} /></a>
+                        <a href='https:/apollodental.netlify.app/AllOn6'> <img src={allon6v2} /></a>
                         <p>All-On-6 Implant Treatment</p>
                     </div>
                     <div className="s_icon_cont" data-aos="fade-up">
-                        <a href='https://apollo.skynoveau.in/GuidedSurgeries'>  <img src={GuidedSurgeries} /></a>
+                        <a href='https:/apollodental.netlify.app/GuidedSurgeries'>  <img src={GuidedSurgeries} /></a>
                         <p>Guided Surgeries</p>
                     </div>
                     <div className="s_icon_cont" data-aos="fade-up">
-                        <a href='https://apollo.skynoveau.in/Asesthetic'>  <img src={Aimplantsv2} /></a>
+                        <a href='https:/apollodental.netlify.app/Asesthetic'>  <img src={Aimplantsv2} /></a>
                         <p>Aesthetic Implants </p>
                     </div>
                     <div className="s_icon_cont" data-aos="fade-up">
-                        <a href='https://apollo.skynoveau.in/SinusLifts' > <img src={Sinusliftv3ai} /></a>
+                        <a href='https:/apollodental.netlify.app/SinusLifts' > <img src={Sinusliftv3ai} /></a>
                         <p>Sinus Lifts </p>
                     </div>
                     <div className="s_icon_cont" data-aos="fade-up">
-                        <a href='https://apollo.skynoveau.in/ThoothOnDay'>  <img src={Toothonadayv6} /></a>
-                        <p>Tooth-on-a-Day</p>
+                        <a href='https:/apollodental.netlify.app/ThoothOnDay'>  <img src={Toothonadayv6} /></a>
+                        <p>Tooth-in-a-Day</p>
                     </div>
                     <div className="s_icon_cont" data-aos="fade-up">
-                        <a href='https://apollo.skynoveau.in/ProsthesisTypes'> <img src={Ptypesv2} /></a>
+                        <a href='https:/apollodental.netlify.app/ProsthesisTypes'> <img src={Ptypesv2} /></a>
                         <p>Prosthesis Types </p>
                     </div>
                 </div>
@@ -262,12 +305,12 @@ function Home() {
                     <img src={P4} />
                 </div>
             </div>
-      
+
 
             <div className='test_main_cont_bg'>
-                <div className='main_titile_cont'>
+                <div className='main_titile_cont' data-aos="fade-up">
                     <div className="specs_title tes1">
-                        <h1 >Testimonials</h1>
+                        <h1>Testimonials</h1>
                         <p></p>
                     </div>
                 </div>
@@ -285,7 +328,7 @@ function Home() {
                                 clickable: true,
                             }}
                             autoplay={{
-                                delay: 1000,
+                                delay: 2500,
                                 disableOnInteraction: false,
                             }}
 
@@ -342,7 +385,7 @@ function Home() {
                                         </div>
                                     </div>
                                 </div>
-                            </SwiperSlide>ssssssssss
+                            </SwiperSlide>
 
                             <SwiperSlide>
                                 <div className="testi_content">

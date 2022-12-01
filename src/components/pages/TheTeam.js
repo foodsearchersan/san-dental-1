@@ -1,12 +1,105 @@
 import React from 'react'
+import { useState } from 'react'
 import Pic3 from '../Assests/Pic3.jpg'
-import clients from '../Assests/clients.jpg'
-import DRJA from '../Assests/DRJA.jpg'
-import chirsty from '../Assests/chirsty.jpg'
-import DrDental from '../Assests/DrDental.jpg'
-import sobika from '../Assests/sobika.JPG'
+import Team1 from '../Assests/Team1.jpg'
+import Team2 from '../Assests/Team2.jpg'
+import Team3 from '../Assests/Team3.jpg'
+import Team4 from '../Assests/Team4.JPG'
+import Team5 from '../Assests/Team5.jpg'
+import drPrem from '../Assests/drPrem.jpg'
+
+import { TiTick } from 'react-icons/ti'
+
+import PropTypes from 'prop-types';
+import { styled } from '@mui/material/styles';
+import Dialog from '@mui/material/Dialog';
+import DialogTitle from '@mui/material/DialogTitle';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
+import TeamData from '../Data/TeamData'
+
+import '../css/team.css'
+import '../css/AllOn6.css'
+
+
+// ----------<< material UI dialog box----------
+const BootstrapDialog = styled(Dialog)(({ theme }) => ({
+    '& .MuiDialogContent-root': {
+        padding: theme.spacing(2),
+    },
+    '& .MuiDialogActions-root': {
+        padding: theme.spacing(1),
+    },
+}));
+
+function BootstrapDialogTitle(props) {
+    const { children, onClose, ...other } = props;
+
+    return (
+        <DialogTitle sx={{ m: 0, p: 2 }} {...other}>
+            {children}
+            {onClose ? (
+                <IconButton
+                    aria-label="close"
+                    onClick={onClose}
+                    sx={{
+                        position: 'absolute',
+                        right: 8,
+                        top: 8,
+                        color: (theme) => theme.palette.grey[500],
+                    }}
+                >
+                    <CloseIcon />
+                </IconButton>
+            ) : null}
+        </DialogTitle>
+    );
+}
+
+BootstrapDialogTitle.propTypes = {
+    children: PropTypes.node,
+    onClose: PropTypes.func.isRequired,
+};
+// ---------->> material UI dialog box----------
 
 function TheTeam() {
+
+    // ----------<< material UI dialog box----------
+    const [open, setOpen] = useState(false);
+    const [Image, setImage] = useState('');
+    const [Name, setName] = useState('');
+    const [Expertise, setExpertise] = useState('');
+    const [Qualification, setQualification] = useState('');
+    const [AlmaMater, setAlmaMater] = useState('');
+    const [Experience, setExperience] = useState('');
+    const [Text1, setText1] = useState('');
+    const [Text2, setText2] = useState('');
+    
+
+
+    const handleClickOpen = (e) => {
+        setImage(e.currentTarget.getAttribute('image'))
+        setName(e.currentTarget.getAttribute('name'))
+        setExpertise(e.currentTarget.getAttribute('expertise'))
+        
+        setQualification(e.currentTarget.getAttribute('qualification'))
+        setAlmaMater(e.currentTarget.getAttribute('almamater'))
+        setExperience(e.currentTarget.getAttribute('experience'))
+        setText1(e.currentTarget.getAttribute('text1'))
+        setText2(e.currentTarget.getAttribute('text2'))
+        setOpen(true);
+
+    };
+ 
+    const handleClose = () => {
+        setOpen(false);
+    };
+    // ---------->> material UI dialog box----------
+
+    const [data, setData] = useState();
+
+
+
     return (
         <div>
             <div className='on6_img_cont'>
@@ -20,112 +113,155 @@ function TheTeam() {
             </div>
 
 
+            <div className="all_on_6_des_title team_title" data-aos="fade-up">
+                <h1 >Our Medical Director</h1>
+                <p></p>
+            </div>
 
+            <div className='theteam_main_cont'>
+                <div className='theteam_cont'>
 
-            <div className='on6_div1_cont'>
-                <div className='on6_div1_main_cont TheTeam_on6_div1_main_cont'>
-                <img src={DRJA}/>
-                    <div className='on6_div1_main_cont_1 TheTeam_on6_div1_main_cont_1 '>
-                        <h1><p>Dr. Jananee Sivapragasam</p>
-                        <p>Expertise: General Dentistry</p>
-                        <p>Qualification: BDS</p>
-                        <p>Alma Mater: SRM University</p>
-                        <p>Experience: 5 years</p>
-                        </h1>
-                        
-
-                        
-
-                        
-
+                    <div className='team_doc_cont'>
+                        <div className='team_doc_cont1' data-aos="fade-up" >
+                            <img src={drPrem} />
+                        </div>
+                        <h2>Dr Prem Lawrence</h2>
                     </div>
+                </div>
+            </div>
+
+            <div className="all_on_6_des_title team_title" data-aos="fade-up">
+                <h1 >Our Doctor Panel</h1>
+                <p></p>
+            </div>
+            <div className='theteam_main_cont'>
+                <div className='theteam_cont'>
+
+                    <div className='team_doc_cont' 
+                    onClick={handleClickOpen}
+                    image={TeamData[0].image.Team2}
+                    name={TeamData[0].name}
+                    expertise={TeamData[0].expertise}
+                    qualification={TeamData[0].qualification}
+                    almamater={TeamData[0].almaMater}
+                    experience={TeamData[0].experience}
+                    text1={TeamData[0].text1}
+                    text2={TeamData[0].text2}
+                    >
+                        <div className='team_doc_cont1' data-aos="fade-up">
+                            <img src={Team2} />
+                        </div>
+                        <h2>Dr.Jananee Sivapragasam</h2>
+                    </div>
+                    <div className='team_doc_cont'
+                    onClick={handleClickOpen}
+                    image={TeamData[1].image.Team3}
+                    name={TeamData[1].name}
+                    expertise={TeamData[1].expertise}
+                    qualification={TeamData[1].qualification}
+                    almamater={TeamData[1].almaMater}
+                    experience={TeamData[1].experience}
+                    text1={TeamData[1].text1}
+                    text2={TeamData[1].text2}
+                    >
+                        <div className='team_doc_cont1' data-aos="fade-up">
+                            <img src={Team3} />
+                        </div>
+                        <h2>Dr. Christy George</h2>
+                    </div>
+                    <div className='team_doc_cont' 
+                   onClick={handleClickOpen}
+                   image={TeamData[2].image.Team4}
+                   name={TeamData[2].name}
+                   expertise={TeamData[2].expertise}
+                   qualification={TeamData[2].qualification}
+                   almamater={TeamData[2].almaMater}
+                   experience={TeamData[2].experience}
+                   text1={TeamData[2].text1}
+                   text2={TeamData[2].text2}
                     
-                    <div className='on6_div1_main_cont_2 TheTeam_on6_div1_main_cont_2 '>
-                    <div className='on6_img_sub_cont'>
-                        <h1>
-                        
-                        <p>Our Resident Consultant Dr. Jananee is a keen advocate for good oral hygiene and she goes above and beyond with her empathy. Her calm demeanour and effective communication involve patients in the healing process, resulting in a quicker and more effective phase of treatment. </p>
-                        <p>She holds a certification for invisible braces and clear aligners. She makes visiting the dentist's clinic a smile from start to finish.</p>
-                        </h1>
+                    >
+                        <div className='team_doc_cont1' data-aos="fade-up">
+                            <img src={Team4} />
                         </div>
+                        <h2>Dr. Sobika</h2>
                     </div>
+                    <div className='team_doc_cont'
+                     onClick={handleClickOpen}
+                     image={TeamData[3].image.Team1}
+                     name={TeamData[3].name}
+                     expertise={TeamData[3].expertise}
+                     qualification={TeamData[3].qualification}
+                     almamater={TeamData[3].almaMater}
+                     experience={TeamData[3].experience}
+                     text1={TeamData[3].text1}
+                     text2={TeamData[3].text2}
+                    >
+                        <div className='team_doc_cont1' data-aos="fade-up">
+                            <img src={Team1} />
+                        </div>
+                        <h2>Dr. Rekha Sampath</h2>
+                    </div>
+                    <div className='team_doc_cont'
+                     onClick={handleClickOpen}
+                     image={TeamData[4].image.Team5}
+                     name={TeamData[4].name}
+                     expertise={TeamData[4].expertise}
+                     qualification={TeamData[4].qualification}
+                     almamater={TeamData[4].almaMater}
+                     experience={TeamData[4].experience}
+                     text1={TeamData[4].text1}
+                     text2={TeamData[4].text2}
+                    >
+                        <div className='team_doc_cont1' data-aos="fade-up">
+                            <img src={Team5} />
+                        </div>
+                        <h2>Dr. Rinu Mary Kuriakose</h2>
+                    </div>
+
+
                 </div>
             </div>
 
 
-            <div className='on6_div1_cont team1'>
-                <div className='on6_div1_main_cont TheTeam_on6_div1_main_cont'>
-                    <div className='on6_div1_main_cont_1 TheTeam_on6_div1_main_cont_1 '>
-                        <p>Dr. Jeyathipan</p>
-                        <p>Expertise: General Dentistry</p>
-                        <p>Qualification: BDS</p>
-                        <p>Alma Mater: Sree Balaji Dental College and Hospital</p>
-                        <p>Experience: 12 years</p>
 
-                    </div>
-                    <div className='on6_div1_main_cont_2 TheTeam_on6_div1_main_cont_2 '>
-                        <p>Dr. Jeyathipan is a highly esteemed dentist who has held executive positions in corporate dental clinics. He is currently our Clinical Head and has been responsible for delivering top-notch patient care. He earned his BDS from Sree Balaji Dental College and has a wealth of clinical practice experience. His abilities as a superb communicator and listener enable the patients to discuss their issues with the utmost comfort. Additionally, his patient-centred approach to healthcare makes it possible to create a treatment programme that is sequential and genuine to the needs of the patients. He is also responsible for delivering the latest techniques in dental procedures to our patients and their families.</p>
+
+            <BootstrapDialog
+                onClose={handleClose}
+                aria-labelledby="customized-dialog-title"
+                open={open}
+            >
+                <BootstrapDialogTitle
+                    id="customized-dialog-title"
+                    onClose={handleClose}
+                ></BootstrapDialogTitle>
+                <div className='dialog_box_cont'>
+                    <div className='dia_team_main_doc_cont'>
+                        <div className='dia_team_doc_cont'>
+                            <div className='dia_team_doc_cont1'>
+                                <img src={Image} />
+                            </div>
                         </div>
-                </div>
-            </div>
-
-
-            <div className='on6_div1_cont'>
-                <div className='on6_div1_main_cont TheTeam_on6_div1_main_cont'>
-                <img src={chirsty} />
-                    <div className='on6_div1_main_cont_1 TheTeam_on6_div1_main_cont_1 '>
-                        <p>Dr. Christy George</p>
-                        <p>Expertise: Periodontics and Dental Implants</p>
-                        <p>Qualification: BDS, MDS</p>
-                        <p>Alma Mater:  Coorg Institute of Dental Sciences and AJ Institute of Dental Sciences</p>
-                        <p>Experience: 1 years</p>
-
-                    </div>
-                    <div className='on6_div1_main_cont_2 TheTeam_on6_div1_main_cont_2 '>
-                        <p>Dr. Christy George our resident Periodontist. has completed her under-graduation from Coorg Institute of Dental Sciences and post-graduation from AJ Institute of Dental Sciences. She has presented various research papers at both national and international conferences. She is a dedicated professional who strives to provide the best care to her patients. She is currently associated with us as a consultant Periodontist and Implantologist, and resident doctor. </p>
+                        <div className='team_div1_title_cont' >
+                            <div className='team_div1_title'>
+                                <p>{Name}</p>
+                                <p><TiTick className='team_tit_icon' />{Expertise}</p>
+                                <p><TiTick className='team_tit_icon' />{Qualification}</p>
+                                <p><TiTick className='team_tit_icon' />{AlmaMater}</p>
+                                <p><TiTick className='team_tit_icon' />{Experience}</p>
+                            </div>
+                            <div>
+                               <p>{Text1}</p>
+                               <p>{Text2}</p>
+                            </div>
                         </div>
-                </div>
-            </div>  
-
-              <div className='on6_div1_cont team1'>
-                <div className='on6_div1_main_cont TheTeam_on6_div1_main_cont'>
-                    <img src={sobika}/>
-                    <div className='on6_div1_main_cont_1 TheTeam_on6_div1_main_cont_1 '>
-                        <p>Dr. Sobika</p>
-                        <p>Expertise:General Dentistry</p>
-                        <p>Qualification: BDS</p>
-                        <p>Alma Mater:  Coorg Institute of Dental Sciences and AJ Institute of Dental Sciences</p>
-                        <p>Experience: 3 years</p>
-
                     </div>
-                    <div className='on6_div1_main_cont_2 TheTeam_on6_div1_main_cont_2 '>
-                        <p>Dr. Sobika’s vibrant and cheerful nature is a natural stress buster for patients seeking expertise at our clinic. She has vast experience in Corporate Dentistry and is an ace in preventive dentistry. Her scope of work covers all basic dental therapeutic procedures like extractions, scaling, root canal treatments etc at Apollo Dental. She has completed a certification course in aligners, is a patient listener and offers her patients the best course of treatment. </p>
-                        </div>
                 </div>
-            </div>          
-
-
-
-
-              <div className='on6_div1_cont'>
-                <div className='on6_div1_main_cont TheTeam_on6_div1_main_cont'>
-                <img src={DrDental} />
-                    <div className='on6_div1_main_cont_1 TheTeam_on6_div1_main_cont_1 '>
-                        <p>Dr. Rekha Sampath</p>
-                        <p>Expertise:Aesthetic Dentistry</p>
-                        <p>Qualification: BDS</p>
-                        <p>Alma Mater:  Shree Balaji dental s</p>
-                        <p>Experience: 3 years</p>
-
-                    </div>
-                    <div className='on6_div1_main_cont_2 TheTeam_on6_div1_main_cont_2 '>
-                        <p>Dr. Rekha Sampath is a cosmetic dentist with more than eight years of experience. She has participated in numerous international conferences, seminars, lectures, and training sessions. She has trained in cosmetic dentistry with some well-known dentists from around the world. She is renowned for giving her patients the very best dental care. Her passion lies in awarding a patient with the best possible smile with cutting-edge cosmetic dentistry procedures and cutting-edge biomimetic dental materials. Dr. Rekha is a dental artist par excellence and has helped her patients in achieving the healthiest and most attractive smiles.  </p>
-                        </div>
-                </div>
-            </div>                                          
+            </BootstrapDialog>
 
         </div>
+
+
     )
 }
-
-export default TheTeam
+export default TheTeam;
